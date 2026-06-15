@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -6,25 +11,20 @@ body {
     line-height: 1.6;
 }
 
-
 .navbar {
     background: #0b1f3a;
     color: white;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px 8%;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #4da6ff;
+.emp {
+    width: 90px;
 }
 
 .menu {
@@ -45,18 +45,16 @@ body {
 
 .hero {
     min-height: 90vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     color: white;
-
     background:
-         linear-gradient(
+        linear-gradient(
             rgba(0, 20, 60, .85),
-            rgba(0, 40, 90, .85)),
+            rgba(0, 40, 90, .85)
+        ),
         url("https://images.unsplash.com/photo-1518770660439-4636190af475") center/cover;
 }
 
@@ -76,15 +74,12 @@ body {
 }
 
 .btn {
-    display: inline-block; 
+    display: inline-block;
     padding: 14px 30px;
-
     background: #2196f3;
     color: white;
-
     text-decoration: none;
     border-radius: 8px;
-
     transition: .3s;
 }
 
@@ -106,13 +101,11 @@ body {
     background: #0b1f3a;
 }
 
+.dark h2,
+.dark p {
+    color: #ccc;
+}
 
-.dark h2 {
-    color: white;
-}
-.dark p{
-    color:color#0b1f3a;
-}
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -124,9 +117,7 @@ body {
     background: white;
     padding: 25px;
     border-radius: 12px;
-    box-shadow:
-        0 5px 15px rgba(0, 0, 0, .08);
-
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
     transition: .3s;
 }
 
@@ -134,8 +125,10 @@ body {
 .plan:hover {
     transform: translateY(-8px);
 }
-
-.card h3,
+.card p{
+    color: rgb(0, 0, 0);
+}
+.card h3 ,
 .plan h3 {
     color: #0b1f3a;
     margin-bottom: 15px;
@@ -156,14 +149,13 @@ body {
     padding: 12px 25px;
     border: none;
     border-radius: 8px;
-
     background: #2196f3;
     color: white;
-
+    cursor: pointer;
     transition: .3s;
 }
 
-.plan button:hover{
+.plan button:hover {
     background: #1976d2;
 }
 
@@ -176,18 +168,36 @@ body {
     max-width: 900px;
     margin: auto;
     text-align: center;
-}
-.about {
     color: #ccc;
 }
 
 .contact-form {
     max-width: 700px;
     margin: auto;
-
-     display: flex;
+    display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+}
+
+.site-card {
+    max-width: 400px;
+    text-align: center;
+}
+
+.site-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.site-card a {
+    text-decoration: none;
+    color: inherit;
 }
 
 footer {
